@@ -31,7 +31,7 @@ createInertiaApp({
             .use(plugin)
             .use(ZiggyVue)
 
-        // تسجيل مكون الأيقونات
+      
         app.component('font-awesome-icon', FontAwesomeIcon)
 
         app.mount(el)

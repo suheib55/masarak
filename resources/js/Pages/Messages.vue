@@ -59,7 +59,7 @@ const sendMessage = async () => {
       isMine: true
     });
 
-    newMessage.value = ''; // 🧼 يمسح الرسالة من خانة الإدخال
+    newMessage.value = ''; 
     nextTick(scrollToBottom);
   } catch (error) {
     console.error('Error sending message:', error);
@@ -73,7 +73,7 @@ const scrollToBottom = () => {
 };
 
 onMounted(() => {
-  // لا يوجد بث مباشر، فقط استدعاء يدوي للرسائل
+  
 });
 
 watch(search, fetchUsers);
@@ -85,7 +85,7 @@ watch(search, fetchUsers);
       <h1 class="text-2xl font-bold mb-4">Messages</h1>
       
       <div class="bg-white rounded-lg shadow overflow-hidden">
-        <!-- Search input -->
+       
         <div class="p-4 border-b">
           <input
             v-model="search"
@@ -96,7 +96,7 @@ watch(search, fetchUsers);
         </div>
         
         <div class="flex h-[500px]">
-          <!-- User list -->
+         
           <div class="w-1/3 border-r overflow-y-auto">
             <div
               v-for="user in users"
@@ -118,14 +118,14 @@ watch(search, fetchUsers);
             </div>
           </div>
           
-          <!-- Chat area -->
+       
           <div class="w-2/3 flex flex-col">
-            <!-- Header -->
+           
             <div v-if="selectedUser" class="p-3 border-b bg-gray-50">
               <p class="font-medium">Chat with {{ selectedUser.name }}</p>
             </div>
             
-            <!-- Messages -->
+          
             <div
               v-if="selectedUser"
               ref="chatContainer"
@@ -151,7 +151,7 @@ watch(search, fetchUsers);
               </div>
             </div>
             
-            <!-- Message input -->
+         
             <div v-if="selectedUser" class="p-3 border-t">
               <div class="flex gap-2">
                 <input
@@ -171,7 +171,7 @@ watch(search, fetchUsers);
               </div>
             </div>
             
-            <!-- Placeholder -->
+        
             <div v-else class="flex-1 flex items-center justify-center text-gray-500">
               Select a user to start chatting
             </div>
