@@ -1,5 +1,8 @@
 <?php
 
+// ✅ تم رفع حد الذاكرة إلى 512 ميغابايت لحل مشكلة FatalError بسبب تجاوز الحد الافتراضي
+ini_set('memory_limit', '512M');
+
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
