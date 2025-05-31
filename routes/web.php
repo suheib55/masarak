@@ -16,6 +16,10 @@ use App\Http\Controllers\Auth\EmailVerificationController;
 use Inertia\Inertia;
 
 Route::get('/', function () {
+    dd('Laravel شغال تمام ✅');
+});
+
+Route::get('/', function () {
     return Inertia::render('Home', [
        
     ]);
