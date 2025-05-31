@@ -86,7 +86,9 @@ const submit = () => {//2
             <div class="mb-5">
                 <InputLabel for="major" value="Major" />
                 <select id="major" v-model="form.major" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-400 focus:border-purple-500 transition-all">
+                    <option value="" disabled>Select your Major</option>
                     <option>دكتور في الطب</option>
+                
 <option>الصحة العامة</option>
 <option>الإدارة والسياسات الصحية</option>
 <option>الإسعافات الأولية والطوارئ</option>
