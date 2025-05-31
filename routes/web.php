@@ -130,11 +130,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
-    Route::get('/messages/search', [MessageController::class, 'search']);
-    Route::get('/messages/{userId}/fetch', [MessageController::class, 'fetchMessages']);
-    Route::post('/messages/send', [MessageController::class, 'send']);
-});
+
 
 require __DIR__.'/auth.php';
